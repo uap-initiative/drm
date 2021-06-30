@@ -7,7 +7,9 @@ The objective of the project is to write a documentation about a data recording
 model wich describes components and links in UAP's sightings files. This model
 will provide the base on wich our client-server application will be developped.
  
-The job consists of editing the source files of web pages, schemas and diagrams. 
+The job consists of editing the source files of web pages, schemas and diagrams.
+These files will be processed by GitHub to publish the documentation as a
+website.
 
 # Code of conduct
 
@@ -44,7 +46,7 @@ Please encode files and characters in __UTF-8__.
 - Push your work and make __pull requests__ to merge your work into the
   `editing` remote branch.
 - When a public release is ready, the remote `editing` branch is merged into
-  `master`, updating the project website. 
+  `master`, updating the project website as mentionned in the Abstract.
 
 Here are some usefull [GitHub guides](https://guides.github.com/). Please
 consider these particularly :

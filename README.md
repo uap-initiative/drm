@@ -11,7 +11,7 @@ links in UAP's sightings files.
 This work will provide the base on wich our client-server application will be
 developped.
 
-This consists of editing the repository wiki pages and source files of schemas
+This consists of editing the source files of web pages and source files of schemas
 and diagrams.
 
 # Installation
