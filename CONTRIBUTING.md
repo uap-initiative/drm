@@ -4,8 +4,8 @@ Here are a few instructions and tips.
 # Abstract
 
 The objective of the project is to write a documentation about a data recording
-model wich describes components and links in UAP's sightings files. This model
-will provide the base on wich our client-server application will be developped.
+model which describes components and links in UAP's sightings files. This model
+will provide the base on which our client-server application will be developped.
  
 The job consists of editing the source files of web pages, schemas and diagrams.
 These files will be processed by GitHub to publish the documentation as a

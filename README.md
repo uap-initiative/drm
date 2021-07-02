@@ -5,10 +5,10 @@ project.
 
 # Description
 
-This project aims to define a data recording model wich describes components and
+This project aims to define a data recording model which describes components and
 links in UAP's sightings files.
 
-This work will provide the base on wich our client-server application will be
+This work will provide the base on which our client-server application will be
 developped.
 
 This consists of editing the source files of web pages and source files of schemas
