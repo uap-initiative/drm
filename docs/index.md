@@ -36,4 +36,6 @@ schemas, measurements, etc. Each element may be
 * the original one or an altered copy ;
 * described with metadata (type, description, title, author, etc.).
 
+![File elements](dot/elements.svg)
+
 ## Data Recording Model

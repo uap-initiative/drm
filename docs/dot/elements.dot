@@ -1,0 +1,31 @@
+/*
+Use 'circo' interpreter
+
+This work by the UAP investigation network initiative is licensed under CC BY-SA
+4.0 (https://creativecommons.org/licenses/by-sa/4.0/).
+*/
+
+digraph{
+
+graph [
+//label="File elements modelisation.",
+comment="This work by the UAP investigation network initiative is licensed under
+CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)."
+]
+
+{rank="source"; uap [label="file"] ;}
+{rank="source"; idy [label="identity"] ;}
+{rank="same"; doc [label="documents"] ; dat [label="data"] ;}
+{rank="same"; elm [label="elements"] ;}
+rol [label="role"] ;
+
+elm -> uap [arrowhead="diamond"] ;
+elm -> doc [arrowhead="none"] ;
+elm -> dat [arrowhead="none"] ;
+doc -> rol [style="dotted"] ;
+rol -> dat [style="dotted"] ;
+rol -> idy [arrowhead="diamond"] ;
+rol -> dat
+rol -> doc
+
+}
