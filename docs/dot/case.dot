@@ -1,0 +1,34 @@
+/*
+This work by the UAP investigation network initiative is licensed under CC BY-SA
+4.0 (https://creativecommons.org/licenses/by-sa/4.0/).
+*/
+
+digraph{
+
+graph [
+//label="UAP case modelisation.", 
+comment="This work by the UAP investigation network initiative is licensed under
+CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)."
+]
+
+{rank="same"; 
+sgn [label="sighting"] ; do [label="actions"] ;
+}
+
+uap [label="file"] ;
+wit [label="witness", shape="none"] ;
+pnm [label="phenomenon", shape="none"] ;
+env [label="environment", shape="none"] ;
+act [label="actors"] ;
+elm [label="elements\r(data, doc)", shape="none"] ;
+
+sgn -> uap [arrowhead="odiamond"] ;
+pnm -> sgn [arrowhead="onormal"]  ;
+env -> sgn [arrowhead="onormal"]  ;
+act -> do  [label="<< perform >>", arrowhead="vee"] ;
+wit -> sgn [arrowhead="onormal"] ;
+act -> wit [arrowhead="none"] ;
+do  -> elm [label="<< produce >>", arrowhead="vee"] ;
+elm -> uap [arrowhead="odiamond"] ;
+
+}
