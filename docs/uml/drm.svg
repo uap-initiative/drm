@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="1393px" preserveAspectRatio="none" style="width:903px;height:1393px;background:#FFFFFF;" version="1.1" viewBox="0 0 903 1393" width="903px" zoomAndPan="magnify"><defs><filter height="300%" id="f15b43i6ysi7w5" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><text fill="#000000" font-family="sans-serif" font-size="18" font-weight="bold" lengthAdjust="spacing" textLength="457" x="216.5" y="16.708">database model for uap sightings recording</text><!--MD5=[9bb17fa743f99e0a93eefef3fe62073b]
+class files--><rect codeLine="62" fill="#FFFAF0" filter="url(#f15b43i6ysi7w5)" height="91.2188" id="files" style="stroke:#B22222;stroke-width:1.5;" width="311" x="123" y="665.9531"/><ellipse cx="258.25" cy="681.9531" fill="#B22222" rx="11" ry="11" style="stroke:#B22222;stroke-width:1.0;"/><path d="M258.6875,679.4844 L260.5313,679.4844 L260.5313,681.0781 C260.5313,681.4688 260.5625,681.6406 260.6563,681.7813 C260.8125,682.0313 261.0938,682.1875 261.3906,682.1875 C261.6563,682.1875 261.9063,682.0625 262.0781,681.8438 C262.2188,681.6719 262.2344,681.5469 262.2344,681.0781 L262.2344,677.7969 L253.4688,677.7969 L253.4688,681.0781 C253.4688,681.4688 253.5,681.6406 253.5781,681.7813 C253.7344,682.0469 254.0313,682.1875 254.3125,682.1875 C254.5938,682.1875 254.8438,682.0625 255.0156,681.8438 C255.125,681.6719 255.1563,681.5313 255.1563,681.0781 L255.1563,679.4844 L256.9844,679.4844 L256.9844,686 L255.875,686 C255.4375,686 255.3125,686.0156 255.1563,686.125 C254.9063,686.2813 254.75,686.5625 254.75,686.8594 C254.75,687.1094 254.8906,687.375 255.1094,687.5313 C255.2656,687.6563 255.4844,687.7031 255.875,687.7031 L259.8125,687.7031 C260.1406,687.7031 260.4063,687.6563 260.5156,687.5781 C260.7813,687.4375 260.9219,687.1406 260.9219,686.8594 C260.9219,686.5781 260.7969,686.3281 260.5625,686.1563 C260.4063,686.0313 260.2656,686 259.8125,686 L258.6875,686 L258.6875,679.4844 Z " fill="#000000"/><text fill="#B22222" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="32" x="278.75" y="686.1074">files</text><line style="stroke:#B22222;stroke-width:1.5;" x1="124" x2="433" y1="697.9531" y2="697.9531"/><text fill="#000000" font-family="liberation mono" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="19" x="143" y="712.1636">fid</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="71" x="166" y="712.1636">UUID : file id</text><text fill="#000000" font-family="liberation mono" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="52" x="143" y="724.9683">created</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="229" x="199" y="724.9683">TIMESTAMP(0) : recording utc timestamp</text><text fill="#000000" font-family="liberation mono" font-size="11" font-style="italic" font-weight="bold" lengthAdjust="spacing" textLength="44" x="143" y="737.7729">creator</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="87" x="191" y="737.7729">UUID : user.uiid</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="131" y="744.3672"/><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="229" x="143" y="750.5776">ref STRING : user-defined file reference</text><!--MD5=[e59cf999063292dce8d6ea34dd10a338]
+class user--><rect codeLine="74" fill="#F0FFFF" filter="url(#f15b43i6ysi7w5)" height="97.1563" id="user" style="stroke:#008B8B;stroke-width:1.5;" width="169" x="265" y="473.4531"/><ellipse cx="317.25" cy="492.4219" fill="#008B8B" rx="11" ry="11" style="stroke:#008B8B;stroke-width:1.0;"/><path d="M317.6875,489.9531 L319.5313,489.9531 L319.5313,491.5469 C319.5313,491.9375 319.5625,492.1094 319.6563,492.25 C319.8125,492.5 320.0938,492.6563 320.3906,492.6563 C320.6563,492.6563 320.9063,492.5313 321.0781,492.3125 C321.2188,492.1406 321.2344,492.0156 321.2344,491.5469 L321.2344,488.2656 L312.4688,488.2656 L312.4688,491.5469 C312.4688,491.9375 312.5,492.1094 312.5781,492.25 C312.7344,492.5156 313.0313,492.6563 313.3125,492.6563 C313.5938,492.6563 313.8438,492.5313 314.0156,492.3125 C314.125,492.1406 314.1563,492 314.1563,491.5469 L314.1563,489.9531 L315.9844,489.9531 L315.9844,496.4688 L314.875,496.4688 C314.4375,496.4688 314.3125,496.4844 314.1563,496.5938 C313.9063,496.75 313.75,497.0313 313.75,497.3281 C313.75,497.5781 313.8906,497.8438 314.1094,498 C314.2656,498.125 314.4844,498.1719 314.875,498.1719 L318.8125,498.1719 C319.1406,498.1719 319.4063,498.125 319.5156,498.0469 C319.7813,497.9063 319.9219,497.6094 319.9219,497.3281 C319.9219,497.0469 319.7969,496.7969 319.5625,496.625 C319.4063,496.5 319.2656,496.4688 318.8125,496.4688 L317.6875,496.4688 L317.6875,489.9531 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="60" x="335.75" y="489.5918">«internal»</text><text fill="#008B8B" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="33" x="349.25" y="503.5605">user</text><line style="stroke:#008B8B;stroke-width:1.5;" x1="266" x2="433" y1="511.3906" y2="511.3906"/><text fill="#000000" font-family="liberation mono" font-size="11" font-style="italic" font-weight="bold" lengthAdjust="spacing" textLength="24" x="285" y="525.6011">uiid</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="115" x="313" y="525.6011">UUID : identities.uiid</text><polygon fill="none" points="276,530.1953,280,534.1953,276,538.1953,272,534.1953" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="liberation mono" font-size="11" font-weight="bold" lengthAdjust="spacing" text-decoration="underline" textLength="20" x="285" y="538.4058">ulg</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="87" x="309" y="538.4058">STRING : loggin</text><polygon fill="none" points="276,543,280,547,276,551,272,547" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="130" x="285" y="551.2104">ucz STRING : password</text><polygon fill="none" points="276,555.8047,280,559.8047,276,563.8047,272,559.8047" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="127" x="285" y="564.0151">uk1 CHAR(128) : key 1</text><!--MD5=[74ed6e307c65cbb8bf407d47b6c01dd9]
+class identities--><rect codeLine="83" fill="#FFFAF0" filter="url(#f15b43i6ysi7w5)" height="206.4609" id="identities" style="stroke:#B22222;stroke-width:1.5;" width="262" x="309.5" y="171.9531"/><ellipse cx="401.25" cy="187.9531" fill="#B22222" rx="11" ry="11" style="stroke:#B22222;stroke-width:1.0;"/><path d="M401.6875,185.4844 L403.5313,185.4844 L403.5313,187.0781 C403.5313,187.4688 403.5625,187.6406 403.6563,187.7813 C403.8125,188.0313 404.0938,188.1875 404.3906,188.1875 C404.6563,188.1875 404.9063,188.0625 405.0781,187.8438 C405.2188,187.6719 405.2344,187.5469 405.2344,187.0781 L405.2344,183.7969 L396.4688,183.7969 L396.4688,187.0781 C396.4688,187.4688 396.5,187.6406 396.5781,187.7813 C396.7344,188.0469 397.0313,188.1875 397.3125,188.1875 C397.5938,188.1875 397.8438,188.0625 398.0156,187.8438 C398.125,187.6719 398.1563,187.5313 398.1563,187.0781 L398.1563,185.4844 L399.9844,185.4844 L399.9844,192 L398.875,192 C398.4375,192 398.3125,192.0156 398.1563,192.125 C397.9063,192.2813 397.75,192.5625 397.75,192.8594 C397.75,193.1094 397.8906,193.375 398.1094,193.5313 C398.2656,193.6563 398.4844,193.7031 398.875,193.7031 L402.8125,193.7031 C403.1406,193.7031 403.4063,193.6563 403.5156,193.5781 C403.7813,193.4375 403.9219,193.1406 403.9219,192.8594 C403.9219,192.5781 403.7969,192.3281 403.5625,192.1563 C403.4063,192.0313 403.2656,192 402.8125,192 L401.6875,192 L401.6875,185.4844 Z " fill="#000000"/><text fill="#B22222" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="70" x="421.75" y="192.1074">identities</text><line style="stroke:#B22222;stroke-width:1.5;" x1="310.5" x2="570.5" y1="203.9531" y2="203.9531"/><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" text-decoration="underline" textLength="20" x="329.5" y="218.1636">uiid</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="139" x="353.5" y="218.1636">UUID : unique identity id</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="317.5" y="224.7578"/><text fill="#000000" font-family="liberation mono" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="44" x="329.5" y="230.9683">gname</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="187" x="377.5" y="230.9683">STRING : given name, first name</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="317.5" y="237.5625"/><text fill="#000000" font-family="liberation mono" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="43" x="329.5" y="243.7729">fname</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="189" x="376.5" y="243.7729">STRING : family name, last name</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="317.5" y="250.3672"/><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="233" x="329.5" y="256.5776">aname STRING : additionnal names (csv)</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="317.5" y="263.1719"/><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="216" x="329.5" y="269.3823">hprfx STRING : honorific prefixes (csv)</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="317.5" y="275.9766"/><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="216" x="329.5" y="282.187">hsufx STRING : honorific suffixes (csv)</text><text fill="#000000" font-family="liberation mono" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="46" x="329.5" y="294.9917">gender</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="98" x="379.5" y="294.9917">CHAR(1) : gender</text><text fill="#000000" font-family="liberation mono" font-size="11" font-style="italic" font-weight="bold" lengthAdjust="spacing" textLength="27" x="329.5" y="307.7964">lang</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="198" x="360.5" y="307.7964">JSON : {lang.alpha3 : lang.version}</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="317.5" y="314.3906"/><text fill="#000000" font-family="liberation mono" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="31" x="329.5" y="320.6011">bday</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="97" x="364.5" y="320.6011">DATE : birth date</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="317.5" y="327.1953"/><text fill="#000000" font-family="liberation mono" font-size="11" font-style="italic" font-weight="bold" lengthAdjust="spacing" textLength="40" x="329.5" y="333.4058">bcntry</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="124" x="373.5" y="333.4058">STRING : birth country</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="317.5" y="340"/><text fill="#000000" font-family="liberation mono" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="51" x="329.5" y="346.2104">bregion</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="151" x="384.5" y="346.2104">STRING : birth region/state</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="317.5" y="352.8047"/><text fill="#000000" font-family="liberation mono" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="43" x="329.5" y="359.0151">bplace</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="183" x="376.5" y="359.0151">STRING : birth place postal code</text><text fill="#000000" font-family="liberation mono" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="52" x="329.5" y="371.8198">anonym</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="145" x="385.5" y="371.8198">BOOLEAN : is anonymous</text><!--MD5=[2273177dd1e2e2e0f4fbe9ecde1d11fc]
+class contact--><rect codeLine="101" fill="#FFFAF0" filter="url(#f15b43i6ysi7w5)" height="168.0469" id="contact" style="stroke:#B22222;stroke-width:1.5;" width="223" x="7" y="437.9531"/><ellipse cx="85.75" cy="453.9531" fill="#B22222" rx="11" ry="11" style="stroke:#B22222;stroke-width:1.0;"/><path d="M86.1875,451.4844 L88.0313,451.4844 L88.0313,453.0781 C88.0313,453.4688 88.0625,453.6406 88.1563,453.7813 C88.3125,454.0313 88.5938,454.1875 88.8906,454.1875 C89.1563,454.1875 89.4063,454.0625 89.5781,453.8438 C89.7188,453.6719 89.7344,453.5469 89.7344,453.0781 L89.7344,449.7969 L80.9688,449.7969 L80.9688,453.0781 C80.9688,453.4688 81,453.6406 81.0781,453.7813 C81.2344,454.0469 81.5313,454.1875 81.8125,454.1875 C82.0938,454.1875 82.3438,454.0625 82.5156,453.8438 C82.625,453.6719 82.6563,453.5313 82.6563,453.0781 L82.6563,451.4844 L84.4844,451.4844 L84.4844,458 L83.375,458 C82.9375,458 82.8125,458.0156 82.6563,458.125 C82.4063,458.2813 82.25,458.5625 82.25,458.8594 C82.25,459.1094 82.3906,459.375 82.6094,459.5313 C82.7656,459.6563 82.9844,459.7031 83.375,459.7031 L87.3125,459.7031 C87.6406,459.7031 87.9063,459.6563 88.0156,459.5781 C88.2813,459.4375 88.4219,459.1406 88.4219,458.8594 C88.4219,458.5781 88.2969,458.3281 88.0625,458.1563 C87.9063,458.0313 87.7656,458 87.3125,458 L86.1875,458 L86.1875,451.4844 Z " fill="#000000"/><text fill="#B22222" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="57" x="106.25" y="458.1074">contact</text><line style="stroke:#B22222;stroke-width:1.5;" x1="8" x2="229" y1="469.9531" y2="469.9531"/><text fill="#000000" font-family="liberation mono" font-size="11" font-style="italic" font-weight="bold" lengthAdjust="spacing" textLength="24" x="27" y="484.1636">uiid</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="115" x="55" y="484.1636">UUID : identities.uiid</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="490.7578"/><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="162" x="27" y="496.9683">street STRING : street name</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="503.5625"/><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="158" x="27" y="509.7729">number SMALLINT : number</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="516.3672"/><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="154" x="27" y="522.5776">box VARCHAR(3) : post box</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="529.1719"/><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="157" x="27" y="535.3823">postal STRING : postal code</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="541.9766"/><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="165" x="27" y="548.187">region STRING : region, state</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="554.7813"/><text fill="#000000" font-family="liberation mono" font-size="11" font-style="italic" lengthAdjust="spacing" textLength="43" x="27" y="560.9917">country</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="150" x="74" y="560.9917">CHAR(3) : countries.alpha3</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="567.5859"/><text fill="#000000" font-family="liberation mono" font-size="11" font-style="italic" lengthAdjust="spacing" textLength="10" x="27" y="573.7964">tz</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="122" x="41" y="573.7964">STRING : tz.timezone</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="580.3906"/><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="121" x="27" y="586.6011">email STRING : email</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="593.1953"/><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="108" x="27" y="599.4058">tel STRING : phone</text><!--MD5=[a83d0e5371f8c854bf54106f324b2000]
+class actors--><rect codeLine="116" fill="#FFFAF0" filter="url(#f15b43i6ysi7w5)" height="142.4375" id="actors" style="stroke:#B22222;stroke-width:1.5;" width="277" x="501" y="816.9531"/><ellipse cx="611.25" cy="832.9531" fill="#B22222" rx="11" ry="11" style="stroke:#B22222;stroke-width:1.0;"/><path d="M611.6875,830.4844 L613.5313,830.4844 L613.5313,832.0781 C613.5313,832.4688 613.5625,832.6406 613.6563,832.7813 C613.8125,833.0313 614.0938,833.1875 614.3906,833.1875 C614.6563,833.1875 614.9063,833.0625 615.0781,832.8438 C615.2188,832.6719 615.2344,832.5469 615.2344,832.0781 L615.2344,828.7969 L606.4688,828.7969 L606.4688,832.0781 C606.4688,832.4688 606.5,832.6406 606.5781,832.7813 C606.7344,833.0469 607.0313,833.1875 607.3125,833.1875 C607.5938,833.1875 607.8438,833.0625 608.0156,832.8438 C608.125,832.6719 608.1563,832.5313 608.1563,832.0781 L608.1563,830.4844 L609.9844,830.4844 L609.9844,837 L608.875,837 C608.4375,837 608.3125,837.0156 608.1563,837.125 C607.9063,837.2813 607.75,837.5625 607.75,837.8594 C607.75,838.1094 607.8906,838.375 608.1094,838.5313 C608.2656,838.6563 608.4844,838.7031 608.875,838.7031 L612.8125,838.7031 C613.1406,838.7031 613.4063,838.6563 613.5156,838.5781 C613.7813,838.4375 613.9219,838.1406 613.9219,837.8594 C613.9219,837.5781 613.7969,837.3281 613.5625,837.1563 C613.4063,837.0313 613.2656,837 612.8125,837 L611.6875,837 L611.6875,830.4844 Z " fill="#000000"/><text fill="#B22222" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="48" x="631.75" y="837.1074">actors</text><line style="stroke:#B22222;stroke-width:1.5;" x1="502" x2="777" y1="848.9531" y2="848.9531"/><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" text-decoration="underline" textLength="24" x="507" y="863.1636">uaid</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="124" x="535" y="863.1636">UUID : unique actor id</text><text fill="#000000" font-family="liberation mono" font-size="11" font-style="italic" font-weight="bold" lengthAdjust="spacing" textLength="24" x="507" y="875.9683">uiid</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="115" x="535" y="875.9683">UUID : identities.uiid</text><text fill="#000000" font-family="liberation mono" font-size="11" font-style="italic" font-weight="bold" lengthAdjust="spacing" textLength="17" x="507" y="888.7729">fid</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="80" x="528" y="888.7729">UUID : files.fid</text><text fill="#000000" font-family="liberation mono" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="34" x="507" y="901.5776">from</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="202" x="545" y="901.5776">TIMESTAMP(0) : from utc timestamp</text><text fill="#000000" font-family="liberation mono" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="16" x="507" y="914.3823">to</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="187" x="527" y="914.3823">TIMESTAMP(0) : to utc timestamp</text><text fill="#000000" font-family="liberation mono" font-size="11" font-style="italic" font-weight="bold" lengthAdjust="spacing" textLength="21" x="507" y="927.187">key</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="105" x="532" y="927.187">STRING : roles.key</text><text fill="#000000" font-family="liberation mono" font-size="11" font-style="italic" font-weight="bold" lengthAdjust="spacing" textLength="20" x="507" y="939.9917">oid</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="241" x="531" y="939.9917">UUID : linked organization organization.oid</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="243" x="507" y="952.7964">nickname STRING : public name or pseudo</text><!--MD5=[b212a2477c1a7caf378aee4428011f65]
+class lang--><rect codeLine="129" fill="#F5FFFA" filter="url(#f15b43i6ysi7w5)" height="84.3516" id="lang" style="stroke:#006400;stroke-width:1.5;" width="236" x="581.5" y="27.9531"/><ellipse cx="661.75" cy="46.9219" fill="#006400" rx="11" ry="11" style="stroke:#006400;stroke-width:1.0;"/><path d="M662.1875,44.4531 L664.0313,44.4531 L664.0313,46.0469 C664.0313,46.4375 664.0625,46.6094 664.1563,46.75 C664.3125,47 664.5938,47.1563 664.8906,47.1563 C665.1563,47.1563 665.4063,47.0313 665.5781,46.8125 C665.7188,46.6406 665.7344,46.5156 665.7344,46.0469 L665.7344,42.7656 L656.9688,42.7656 L656.9688,46.0469 C656.9688,46.4375 657,46.6094 657.0781,46.75 C657.2344,47.0156 657.5313,47.1563 657.8125,47.1563 C658.0938,47.1563 658.3438,47.0313 658.5156,46.8125 C658.625,46.6406 658.6563,46.5 658.6563,46.0469 L658.6563,44.4531 L660.4844,44.4531 L660.4844,50.9688 L659.375,50.9688 C658.9375,50.9688 658.8125,50.9844 658.6563,51.0938 C658.4063,51.25 658.25,51.5313 658.25,51.8281 C658.25,52.0781 658.3906,52.3438 658.6094,52.5 C658.7656,52.625 658.9844,52.6719 659.375,52.6719 L663.3125,52.6719 C663.6406,52.6719 663.9063,52.625 664.0156,52.5469 C664.2813,52.4063 664.4219,52.1094 664.4219,51.8281 C664.4219,51.5469 664.2969,51.2969 664.0625,51.125 C663.9063,51 663.7656,50.9688 663.3125,50.9688 L662.1875,50.9688 L662.1875,44.4531 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="71" x="680.25" y="44.0918">«reference»</text><text fill="#006400" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="31" x="700.25" y="58.0605">lang</text><line style="stroke:#006400;stroke-width:1.5;" x1="582.5" x2="816.5" y1="65.8906" y2="65.8906"/><text fill="#000000" font-family="liberation mono" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="44" x="587.5" y="80.1011">alpha3</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="176" x="635.5" y="80.1011">CHAR(3) : iso 639 alpha-3 code</text><text fill="#000000" font-family="liberation mono" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="49" x="587.5" y="92.9058">version</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="115" x="640.5" y="92.9058">STRING : iso version</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="195" x="587.5" y="105.7104">name STRING : name of language</text><!--MD5=[f1eac7eba1b6cc2466544fd95c303648]
+class tz--><rect codeLine="137" fill="#F5FFFA" filter="url(#f15b43i6ysi7w5)" height="71.5469" id="tz" style="stroke:#006400;stroke-width:1.5;" width="215" x="59" y="238.9531"/><ellipse cx="128.75" cy="257.9219" fill="#006400" rx="11" ry="11" style="stroke:#006400;stroke-width:1.0;"/><path d="M129.1875,255.4531 L131.0313,255.4531 L131.0313,257.0469 C131.0313,257.4375 131.0625,257.6094 131.1563,257.75 C131.3125,258 131.5938,258.1563 131.8906,258.1563 C132.1563,258.1563 132.4063,258.0313 132.5781,257.8125 C132.7188,257.6406 132.7344,257.5156 132.7344,257.0469 L132.7344,253.7656 L123.9688,253.7656 L123.9688,257.0469 C123.9688,257.4375 124,257.6094 124.0781,257.75 C124.2344,258.0156 124.5313,258.1563 124.8125,258.1563 C125.0938,258.1563 125.3438,258.0313 125.5156,257.8125 C125.625,257.6406 125.6563,257.5 125.6563,257.0469 L125.6563,255.4531 L127.4844,255.4531 L127.4844,261.9688 L126.375,261.9688 C125.9375,261.9688 125.8125,261.9844 125.6563,262.0938 C125.4063,262.25 125.25,262.5313 125.25,262.8281 C125.25,263.0781 125.3906,263.3438 125.6094,263.5 C125.7656,263.625 125.9844,263.6719 126.375,263.6719 L130.3125,263.6719 C130.6406,263.6719 130.9063,263.625 131.0156,263.5469 C131.2813,263.4063 131.4219,263.1094 131.4219,262.8281 C131.4219,262.5469 131.2969,262.2969 131.0625,262.125 C130.9063,262 130.7656,261.9688 130.3125,261.9688 L129.1875,261.9688 L129.1875,255.4531 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="71" x="147.25" y="255.0918">«reference»</text><text fill="#006400" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="15" x="175.25" y="269.0605">tz</text><line style="stroke:#006400;stroke-width:1.5;" x1="60" x2="273" y1="276.8906" y2="276.8906"/><text fill="#000000" font-family="liberation mono" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="63" x="65" y="291.1011">timezone</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="136" x="132" y="291.1011">STRING : iana timezone</text><text fill="#000000" font-family="liberation mono" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="49" x="65" y="303.9058">version</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="95" x="118" y="303.9058">STRING : version</text><!--MD5=[3a05a11cd089da026a9d9a8af459bd09]
+class countries--><rect codeLine="145" fill="#F5FFFA" filter="url(#f15b43i6ysi7w5)" height="84.3516" id="countries" style="stroke:#006400;stroke-width:1.5;" width="243" x="117" y="27.9531"/><ellipse cx="199.25" cy="46.9219" fill="#006400" rx="11" ry="11" style="stroke:#006400;stroke-width:1.0;"/><path d="M199.6875,44.4531 L201.5313,44.4531 L201.5313,46.0469 C201.5313,46.4375 201.5625,46.6094 201.6563,46.75 C201.8125,47 202.0938,47.1563 202.3906,47.1563 C202.6563,47.1563 202.9063,47.0313 203.0781,46.8125 C203.2188,46.6406 203.2344,46.5156 203.2344,46.0469 L203.2344,42.7656 L194.4688,42.7656 L194.4688,46.0469 C194.4688,46.4375 194.5,46.6094 194.5781,46.75 C194.7344,47.0156 195.0313,47.1563 195.3125,47.1563 C195.5938,47.1563 195.8438,47.0313 196.0156,46.8125 C196.125,46.6406 196.1563,46.5 196.1563,46.0469 L196.1563,44.4531 L197.9844,44.4531 L197.9844,50.9688 L196.875,50.9688 C196.4375,50.9688 196.3125,50.9844 196.1563,51.0938 C195.9063,51.25 195.75,51.5313 195.75,51.8281 C195.75,52.0781 195.8906,52.3438 196.1094,52.5 C196.2656,52.625 196.4844,52.6719 196.875,52.6719 L200.8125,52.6719 C201.1406,52.6719 201.4063,52.625 201.5156,52.5469 C201.7813,52.4063 201.9219,52.1094 201.9219,51.8281 C201.9219,51.5469 201.7969,51.2969 201.5625,51.125 C201.4063,51 201.2656,50.9688 200.8125,50.9688 L199.6875,50.9688 L199.6875,44.4531 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="71" x="219.25" y="44.0918">«reference»</text><text fill="#006400" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="70" x="219.75" y="58.0605">countries</text><line style="stroke:#006400;stroke-width:1.5;" x1="118" x2="359" y1="65.8906" y2="65.8906"/><text fill="#000000" font-family="liberation mono" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="44" x="123" y="80.1011">alpha3</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="183" x="171" y="80.1011">CHAR(3) : iso 3166 alpha-3 code</text><text fill="#000000" font-family="liberation mono" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="49" x="123" y="92.9058">version</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="147" x="176" y="92.9058">STRING : iso 3166 version</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="184" x="123" y="105.7104">name STRING : name of country</text><!--MD5=[49762a54e1b04ffe7db6f74326b29b36]
+class roles--><rect codeLine="153" fill="#F5FFFA" filter="url(#f15b43i6ysi7w5)" height="71.5469" id="roles" style="stroke:#006400;stroke-width:1.5;" width="220" x="589.5" y="485.9531"/><ellipse cx="661.75" cy="504.9219" fill="#006400" rx="11" ry="11" style="stroke:#006400;stroke-width:1.0;"/><path d="M662.1875,502.4531 L664.0313,502.4531 L664.0313,504.0469 C664.0313,504.4375 664.0625,504.6094 664.1563,504.75 C664.3125,505 664.5938,505.1563 664.8906,505.1563 C665.1563,505.1563 665.4063,505.0313 665.5781,504.8125 C665.7188,504.6406 665.7344,504.5156 665.7344,504.0469 L665.7344,500.7656 L656.9688,500.7656 L656.9688,504.0469 C656.9688,504.4375 657,504.6094 657.0781,504.75 C657.2344,505.0156 657.5313,505.1563 657.8125,505.1563 C658.0938,505.1563 658.3438,505.0313 658.5156,504.8125 C658.625,504.6406 658.6563,504.5 658.6563,504.0469 L658.6563,502.4531 L660.4844,502.4531 L660.4844,508.9688 L659.375,508.9688 C658.9375,508.9688 658.8125,508.9844 658.6563,509.0938 C658.4063,509.25 658.25,509.5313 658.25,509.8281 C658.25,510.0781 658.3906,510.3438 658.6094,510.5 C658.7656,510.625 658.9844,510.6719 659.375,510.6719 L663.3125,510.6719 C663.6406,510.6719 663.9063,510.625 664.0156,510.5469 C664.2813,510.4063 664.4219,510.1094 664.4219,509.8281 C664.4219,509.5469 664.2969,509.2969 664.0625,509.125 C663.9063,509 663.7656,508.9688 663.3125,508.9688 L662.1875,508.9688 L662.1875,502.4531 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="71" x="680.25" y="502.0918">«reference»</text><text fill="#006400" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="37" x="697.25" y="516.0605">roles</text><line style="stroke:#006400;stroke-width:1.5;" x1="590.5" x2="808.5" y1="523.8906" y2="523.8906"/><text fill="#000000" font-family="liberation mono" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="22" x="595.5" y="538.1011">key</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="100" x="621.5" y="538.1011">STRING : role key</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="84" x="595.5" y="550.9058">labels JSON : {</text><text fill="#000000" font-family="liberation mono" font-size="11" font-style="italic" lengthAdjust="spacing" textLength="66" x="679.5" y="550.9058">lang.alpha3</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="54" x="749.5" y="550.9058">: label,...}</text><!--MD5=[bac8ba0074fa2bbe2ec6c3938559e71c]
+class doc--><rect codeLine="170" fill="#FFFAF0" filter="url(#f15b43i6ysi7w5)" height="308.8984" id="doc" style="stroke:#B22222;stroke-width:1.5;" width="255" x="623" y="1018.9531"/><ellipse cx="733.25" cy="1034.9531" fill="#B22222" rx="11" ry="11" style="stroke:#B22222;stroke-width:1.0;"/><path d="M733.6875,1032.4844 L735.5313,1032.4844 L735.5313,1034.0781 C735.5313,1034.4688 735.5625,1034.6406 735.6563,1034.7813 C735.8125,1035.0313 736.0938,1035.1875 736.3906,1035.1875 C736.6563,1035.1875 736.9063,1035.0625 737.0781,1034.8438 C737.2188,1034.6719 737.2344,1034.5469 737.2344,1034.0781 L737.2344,1030.7969 L728.4688,1030.7969 L728.4688,1034.0781 C728.4688,1034.4688 728.5,1034.6406 728.5781,1034.7813 C728.7344,1035.0469 729.0313,1035.1875 729.3125,1035.1875 C729.5938,1035.1875 729.8438,1035.0625 730.0156,1034.8438 C730.125,1034.6719 730.1563,1034.5313 730.1563,1034.0781 L730.1563,1032.4844 L731.9844,1032.4844 L731.9844,1039 L730.875,1039 C730.4375,1039 730.3125,1039.0156 730.1563,1039.125 C729.9063,1039.2813 729.75,1039.5625 729.75,1039.8594 C729.75,1040.1094 729.8906,1040.375 730.1094,1040.5313 C730.2656,1040.6563 730.4844,1040.7031 730.875,1040.7031 L734.8125,1040.7031 C735.1406,1040.7031 735.4063,1040.6563 735.5156,1040.5781 C735.7813,1040.4375 735.9219,1040.1406 735.9219,1039.8594 C735.9219,1039.5781 735.7969,1039.3281 735.5625,1039.1563 C735.4063,1039.0313 735.2656,1039 734.8125,1039 L733.6875,1039 L733.6875,1032.4844 Z " fill="#000000"/><text fill="#B22222" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="26" x="753.75" y="1039.1074">doc</text><line style="stroke:#B22222;stroke-width:1.5;" x1="624" x2="877" y1="1050.9531" y2="1050.9531"/><text fill="#000000" font-family="liberation mono" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="28" x="629" y="1065.1636">udid</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="153" x="661" y="1065.1636">UUID : unique document id</text><text fill="#000000" font-family="liberation mono" font-size="11" font-style="italic" lengthAdjust="spacing" textLength="37" x="629" y="1077.9683">author</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="100" x="670" y="1077.9683">UUID : actors.uaid</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="101" x="629" y="1090.7729">title STRING : title</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="146" x="629" y="1103.5776">desc STRING : description</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="158" x="629" y="1116.3823">contrib JSON : contributors {</text><text fill="#000000" font-family="liberation mono" font-size="11" font-style="italic" lengthAdjust="spacing" textLength="63" x="787" y="1116.3823">actors.uaid</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="19" x="850" y="1116.3823">,...}</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="139" x="629" y="1129.187">license STRING : license</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="152" x="629" y="1141.9917">rightsh JSON : rights holder</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="161" x="629" y="1154.7964">created JSON : date created</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="193" x="629" y="1167.6011">location STRING : location created</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="140" x="629" y="1180.4058">type STRING : dcmi type</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="131" x="629" y="1193.2104">subject STRING : topics</text><text fill="#000000" font-family="liberation mono" font-size="11" font-style="italic" lengthAdjust="spacing" textLength="52" x="629" y="1206.0151">language</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="122" x="685" y="1206.0151">CHAR(3) : lang.alpha3</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="243" x="629" y="1218.8198">hash CHAR(128) : document hashing value</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="162" x="629" y="1231.6245">acces CHAR(1) : access right</text><text fill="#000000" font-family="liberation mono" font-size="11" font-style="italic" lengthAdjust="spacing" textLength="51" x="629" y="1244.4292">mediator</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="100" x="684" y="1244.4292">UUID : actors.uaid</text><text fill="#000000" font-family="liberation mono" font-size="11" font-style="italic" lengthAdjust="spacing" textLength="52" x="629" y="1257.2339">publisher</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="100" x="685" y="1257.2339">UUID : actors.uaid</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="163" x="629" y="1270.0386">format STRING : MIME format</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="148" x="629" y="1282.8433">size SMALLINT : size (mo)</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="222" x="629" y="1295.6479">duration SMALLINT : duration (iso 8601)</text><text fill="#000000" font-family="liberation mono" font-size="11" font-style="italic" lengthAdjust="spacing" textLength="38" x="629" y="1308.4526">source</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="86" x="671" y="1308.4526">UUID : doc.udid</text><text fill="#000000" font-family="liberation mono" font-size="11" font-style="italic" lengthAdjust="spacing" textLength="39" x="629" y="1321.2573">isverof</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="86" x="672" y="1321.2573">UUID : doc.udid</text><!--MD5=[97b2697e301c6cdc6225058d67f59647]
+class organizations--><rect codeLine="231" fill="#FFFFFF" filter="url(#f15b43i6ysi7w5)" height="71.5469" id="organizations" style="stroke:#000000;stroke-width:1.5;" width="198" x="540.5" y="675.4531"/><ellipse cx="584.75" cy="694.4219" fill="#696969" rx="11" ry="11" style="stroke:#000000;stroke-width:1.0;"/><path d="M585.1875,691.9531 L587.0313,691.9531 L587.0313,693.5469 C587.0313,693.9375 587.0625,694.1094 587.1563,694.25 C587.3125,694.5 587.5938,694.6563 587.8906,694.6563 C588.1563,694.6563 588.4063,694.5313 588.5781,694.3125 C588.7188,694.1406 588.7344,694.0156 588.7344,693.5469 L588.7344,690.2656 L579.9688,690.2656 L579.9688,693.5469 C579.9688,693.9375 580,694.1094 580.0781,694.25 C580.2344,694.5156 580.5313,694.6563 580.8125,694.6563 C581.0938,694.6563 581.3438,694.5313 581.5156,694.3125 C581.625,694.1406 581.6563,694 581.6563,693.5469 L581.6563,691.9531 L583.4844,691.9531 L583.4844,698.4688 L582.375,698.4688 C581.9375,698.4688 581.8125,698.4844 581.6563,698.5938 C581.4063,698.75 581.25,699.0313 581.25,699.3281 C581.25,699.5781 581.3906,699.8438 581.6094,700 C581.7656,700.125 581.9844,700.1719 582.375,700.1719 L586.3125,700.1719 C586.6406,700.1719 586.9063,700.125 587.0156,700.0469 C587.2813,699.9063 587.4219,699.6094 587.4219,699.3281 C587.4219,699.0469 587.2969,698.7969 587.0625,698.625 C586.9063,698.5 586.7656,698.4688 586.3125,698.4688 L585.1875,698.4688 L585.1875,691.9531 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="43" x="634.25" y="691.5918">«draft»</text><text fill="#696969" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="101" x="605.25" y="705.5605">organizations</text><line style="stroke:#000000;stroke-width:1.5;" x1="541.5" x2="737.5" y1="713.3906" y2="713.3906"/><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="186" x="546.5" y="727.6011">oid UUID : unique organisation id</text><text fill="#000000" font-family="liberation mono" font-size="11" lengthAdjust="spacing" textLength="184" x="546.5" y="740.4058">onm STRING : legal entity name</text><!--MD5=[1ee66ab92a314ad9083cf29989d2f6c7]
+link user to files--><path codeLine="240" d="M349.5,570.7541 C349.5,570.7541 349.5,660.7481 349.5,660.7481 " fill="none" id="user-to-files" style="stroke:#008B8B;stroke-width:2.0;"/><polygon fill="#008B8B" points="349.5,665.7481,353.5,656.7481,349.5,660.7481,345.5,656.7481,349.5,665.7481" style="stroke:#008B8B;stroke-width:2.0;"/><!--MD5=[be435aac64c484e21bc8cee9f5c2473b]
+link identities to user--><path codeLine="241" d="M392.5,378.2721 C392.5,378.2721 392.5,468.2231 392.5,468.2231 " fill="none" id="identities-to-user" style="stroke:#B22222;stroke-width:2.0;"/><polygon fill="#B22222" points="392.5,473.2231,396.5,464.2231,392.5,468.2231,388.5,464.2231,392.5,473.2231" style="stroke:#B22222;stroke-width:2.0;"/><!--MD5=[33438fc62a5af1cada609b21fe3d446b]
+link identities to contact--><path codeLine="242" d="M351,378.0251 C351,421.3761 351,461.9531 351,461.9531 C351,461.9531 235.323,461.9531 235.323,461.9531 " fill="none" id="identities-to-contact" style="stroke:#B22222;stroke-width:2.0;"/><polygon fill="#B22222" points="230.323,461.9531,239.323,465.9531,235.323,461.9531,239.323,457.9531,230.323,461.9531" style="stroke:#B22222;stroke-width:2.0;"/><!--MD5=[d931c054cf4a08879d8959b48403fad3]
+link identities to actors--><path codeLine="243" d="M527.333,378.2471 C527.333,378.2471 527.333,811.8301 527.333,811.8301 " fill="none" id="identities-to-actors" style="stroke:#B22222;stroke-width:2.0;"/><polygon fill="#B22222" points="527.333,816.8301,531.333,807.8301,527.333,811.8301,523.333,807.8301,527.333,816.8301" style="stroke:#B22222;stroke-width:2.0;"/><!--MD5=[8ead5c4cb9a9131117aff236a345b621]
+link files to actors--><path codeLine="244" d="M434.052,752.9531 C478.027,752.9531 514.167,752.9531 514.167,752.9531 C514.167,752.9531 514.167,811.8951 514.167,811.8951 " fill="none" id="files-to-actors" style="stroke:#B22222;stroke-width:2.0;"/><polygon fill="#B22222" points="514.167,816.8951,518.167,807.8951,514.167,811.8951,510.167,807.8951,514.167,816.8951" style="stroke:#B22222;stroke-width:2.0;"/><!--MD5=[e109f795c510c1f5c7fe0d3a484c35c7]
+link roles to actors--><path codeLine="245" d="M758.25,558.0481 C758.25,558.0481 758.25,811.8491 758.25,811.8491 " fill="none" id="roles-to-actors" style="stroke:#006400;stroke-width:2.0;"/><polygon fill="#006400" points="758.25,816.8491,762.25,807.8491,758.25,811.8491,754.25,807.8491,758.25,816.8491" style="stroke:#006400;stroke-width:2.0;"/><!--MD5=[2dfff7863d37219b6d3ac1f58479341b]
+link tz to contact--><path codeLine="246" d="M144.5,311.1331 C144.5,311.1331 144.5,432.8481 144.5,432.8481 " fill="none" id="tz-to-contact" style="stroke:#006400;stroke-width:2.0;"/><polygon fill="#006400" points="144.5,437.8481,148.5,428.8481,144.5,432.8481,140.5,428.8481,144.5,437.8481" style="stroke:#006400;stroke-width:2.0;"/><!--MD5=[89adbb16d620380af06a741ab54a6fb8]
+link organizations to actors--><path codeLine="247" d="M639.5,747.5961 C639.5,747.5961 639.5,811.8651 639.5,811.8651 " fill="none" id="organizations-to-actors" style="stroke:#B22222;stroke-width:2.0;"/><polygon fill="#B22222" points="639.5,816.8651,643.5,807.8651,639.5,811.8651,635.5,807.8651,639.5,816.8651" style="stroke:#B22222;stroke-width:2.0;"/><!--MD5=[087c61a547e4a552b56c7d1416e57b13]
+link lang to identities--><path codeLine="248" d="M585.5,112.4331 C585.5,172.4731 585.5,274.9531 585.5,274.9531 C585.5,274.9531 576.597,274.9531 576.597,274.9531 " fill="none" id="lang-to-identities" style="stroke:#006400;stroke-width:2.0;"/><polygon fill="#006400" points="571.597,274.9531,580.597,278.9531,576.597,274.9531,580.597,270.9531,571.597,274.9531" style="stroke:#006400;stroke-width:2.0;"/><!--MD5=[d8cffbc3acebee83c51a437fdcd1283a]
+link countries to identities--><path codeLine="249" d="M334.75,112.4331 C334.75,112.4331 334.75,166.6331 334.75,166.6331 " fill="none" id="countries-to-identities" style="stroke:#006400;stroke-width:2.0;"/><polygon fill="#006400" points="334.75,171.6331,338.75,162.6331,334.75,166.6331,330.75,162.6331,334.75,171.6331" style="stroke:#006400;stroke-width:2.0;"/><!--MD5=[10f9e6a322d2b8c422fc9f228b9e447d]
+link countries to contact--><path codeLine="250" d="M291.75,112.0731 C291.75,211.0131 291.75,449.9531 291.75,449.9531 C291.75,449.9531 235.181,449.9531 235.181,449.9531 " fill="none" id="countries-to-contact" style="stroke:#006400;stroke-width:2.0;"/><polygon fill="#006400" points="230.181,449.9531,239.181,453.9531,235.181,449.9531,239.181,445.9531,230.181,449.9531" style="stroke:#006400;stroke-width:2.0;"/><!--MD5=[dccf64c7479218dc4c432d5e95e9ad3d]
+link lang to roles--><path codeLine="251" d="M699.5,112.0731 C699.5,112.0731 699.5,480.8331 699.5,480.8331 " fill="none" id="lang-to-roles" style="stroke:#006400;stroke-width:2.0;"/><polygon fill="#006400" points="699.5,485.8331,703.5,476.8331,699.5,480.8331,695.5,476.8331,699.5,485.8331" style="stroke:#006400;stroke-width:2.0;"/><!--MD5=[2c3d1111b57bc81de218d6be3340eb88]
+link lang to doc--><path codeLine="252" d="M813.5,112.2031 C813.5,112.2031 813.5,1013.7431 813.5,1013.7431 " fill="none" id="lang-to-doc" style="stroke:#006400;stroke-width:2.0;"/><polygon fill="#006400" points="813.5,1018.7431,817.5,1009.7431,813.5,1013.7431,809.5,1009.7431,813.5,1018.7431" style="stroke:#006400;stroke-width:2.0;"/><!--MD5=[fa7e49bb4c6741694d3d6ab86dcfa0ea]
+link actors to doc--><path codeLine="253" d="M700.5,959.2601 C700.5,959.2601 700.5,1013.8341 700.5,1013.8341 " fill="none" id="actors-to-doc" style="stroke:#B22222;stroke-width:2.0;"/><polygon fill="#B22222" points="700.5,1018.8341,704.5,1009.8341,700.5,1013.8341,696.5,1009.8341,700.5,1018.8341" style="stroke:#B22222;stroke-width:2.0;"/><!--MD5=[897313f80191cc347946abd268c54aaf]
+link doc to doc--><path codeLine="254" d="M847.75,1018.5961 C847.75,1000.8471 847.75,988.9531 847.75,988.9531 C847.75,988.9531 896,988.9531 896,988.9531 C896,988.9531 896,1345.9531 896,1345.9531 C896,1345.9531 750.5,1345.9531 750.5,1345.9531 C750.5,1345.9531 750.5,1333.1423 750.5,1333.1423 " fill="none" id="doc-to-doc" style="stroke:#B22222;stroke-width:2.0;"/><polygon fill="#B22222" points="750.5,1328.1423,746.5,1337.1423,750.5,1333.1423,754.5,1337.1423,750.5,1328.1423" style="stroke:#B22222;stroke-width:2.0;"/><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="409" x="240.5" y="1361.2354">This work is licensed under the creative commons attribution-sharealike 4.0</text><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="301" x="294.5" y="1372.876">international license. To view a copy of this license, visit</text><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="254" x="318" y="1384.5166">http://creativecommons.org/licenses/by-sa/4.0/.</text><!--MD5=[5ce021c80a4e5b0a761ea72ee7e6bca9]
+@startuml
+'plantuml version : 1.2021.10beta2
+
+'Tthis work is licensed under the creative commons attribution-sharealike 4.0
+'international license. To view a copy of this license, visit
+'http://creativecommons.org/licenses/by-sa/4.0/.
+
+'!include skin.iuml
+skinparam titlefontstyle bold
+
+skinparam arrowfontsize 8
+skinparam arrowcolor firebrick
+skinparam arrowthickness 2
+
+skinparam classfontstyle bold
+skinparam classfontcolor firebrick
+skinparam classbordercolor firebrick
+skinparam classbackgroundcolor floralwhite
+skinparam classfontstyle bold
+skinparam classattributefontname liberation mono
+skinparam linetype ortho
+
+!function $fk($a) !return "<i>" + $a + "</i>"
+    'foreign key
+!function $pk($a) !return "<b>" + $a + "</b>"
+    'primary key
+!function $uk($a) !return "<u>" + $a + "</u>"
+    'unique key
+
+skinparam class {
+    'draft
+    bordercolor<<draft>> black
+    fontcolor<<draft>> dimgrey
+    backgroundcolor<<draft>> white
+
+    'reference
+    bordercolor<<reference>> darkgreen
+    backgroundcolor<<reference>> mintcream
+    fontcolor<<reference>> darkgreen
+
+    'internal
+    bordercolor<<internal>> darkcyan
+    backgroundcolor<<internal>> azure
+    fontcolor<<internal>> darkcyan
+}
+
+hide empty methods
+
+
+title database model for uap sightings recording
+footer
+    This work is licensed under the creative commons attribution-sharealike 4.0
+    international license. To view a copy of this license, visit
+    http://creativecommons.org/licenses/by-sa/4.0/.
+endfooter
+
+'- : private     : r/w localy by the user, not published
+'# : protected   : r/w localy by the user, encrypted, not published
+
+
+'rub: objects
+
+class files << (T,Firebrick) >> {
+	{field}  $pk(fid) UUID : file id
+        'formerly : fid CHAR(128)
+	{field}  $pk(created) TIMESTAMP(0) : recording utc timestamp
+        'formerly rec FLOAT
+	{field}  $pk($fk(creator)) UUID : user.uiid
+        'uid
+	{field} -ref STRING : user-defined file reference
+        'udr
+}
+ 
+
+class user << (T, darkcyan) internal >> {
+    'local app users
+	{field} $pk($fk(uiid)) UUID : identities.uiid
+	{field} #$pk($uk(ulg)) STRING : loggin
+	{field} #ucz STRING : password
+	{field} #uk1 CHAR(128) : key 1
+}
+ 
+
+class identities << (T,firebrick) >> {
+    'people
+	{field}  $uk(uiid) UUID : unique identity id
+	{field} -$pk(gname) STRING : given name, first name
+	{field} -$pk(fname) STRING : family name, last name
+	{field} -aname STRING : additionnal names (csv)
+	{field} -hprfx STRING : honorific prefixes (csv)
+	{field} -hsufx STRING : honorific suffixes (csv)
+	{field}  $pk(gender) CHAR(1) : gender
+	{field}  $pk($fk(lang)) JSON : {lang.alpha3 : lang.version}
+	{field} -$pk(bday) DATE : birth date
+	{field} -$pk($fk(bcntry)) STRING : birth country
+	{field} -$pk(bregion) STRING : birth region/state
+	{field} -$pk(bplace) STRING : birth place postal code
+	{field}  $pk(anonym) BOOLEAN : is anonymous
+}
+ 
+
+class contact << (T,firebrick) >> {
+    'identities contact details
+	{field}  $pk($fk(uiid)) UUID : identities.uiid
+	{field} -street STRING : street name
+	{field} -number SMALLINT : number
+	{field} -box VARCHAR(3) : post box
+	{field} -postal STRING : postal code
+	{field} -region STRING : region, state
+	{field} -$fk(country) CHAR(3) : countries.alpha3
+	{field} -$fk(tz) STRING : tz.timezone
+	{field} -email STRING : email
+	{field} -tel STRING : phone
+}
+ 
+
+class actors  << (T,firebrick) >> {
+    'role(s) taken by identities in each file
+	{field} $uk(uaid) UUID : unique actor id
+	{field} $pk($fk(uiid)) UUID : identities.uiid
+	{field} $pk($fk(fid)) UUID : files.fid
+	{field} $pk(from) TIMESTAMP(0) : from utc timestamp
+	{field} $pk(to) TIMESTAMP(0) : to utc timestamp
+	{field} $pk($fk(key)) STRING : roles.key
+	{field} $pk($fk(oid)) UUID : linked organization organization.oid
+	{field} nickname STRING : public name or pseudo
+}
+ 
+
+class lang << (T,darkgreen) reference >> {
+    'iso 639 languages
+    {field} $pk(alpha3) CHAR(3) : iso 639 alpha-3 code
+    {field} $pk(version) STRING : iso version
+    {field} name STRING : name of language
+}
+ 
+
+class tz << (T,darkgreen) reference >> {
+    'iana timezones
+    {field} $pk("timezone") STRING : iana timezone
+    {field} $pk("version") STRING : version
+        ' as stated in the file 'version'
+}
+ 
+
+class countries << (T,darkgreen) reference >> {
+    'iso 3166 country codes
+    {field} $pk(alpha3) CHAR(3) : iso 3166 alpha-3 code
+    {field} $pk(version) STRING : iso 3166 version
+    {field} name STRING : name of country
+}
+
+
+class roles << (T,darkgreen) reference >> {
+    'roles that can be taken by identities in files :
+    '   direct witness, indirect witness, self-employed investigator, investigator
+    '   attaché, ufologist, organization manager
+	{field} $pk(key) STRING : role key
+	{field} labels JSON : {$fk(lang.alpha3) : label,...}
+}
+
+ 
+'class "log" as log <<internal>>
+'    log : table  \t : affected table
+'    log : object \t : affected id
+'    log : action \t : create, modify, delete
+'    log : uiid   \t : [fk:user.uiid]
+'    log : date   \t : utc timestamp
+
+
+class doc << (T,Firebrick) >> {
+    'documents
+    'according to dcmi 'terms' and 'types' namespaces
+    {field} $pk(udid) UUID : unique document id
+    {field} $fk(author) UUID : actors.uaid
+        ' dcmi: creator
+    {field} title STRING : title
+    {field} desc STRING : description
+    {field} contrib JSON : contributors {$fk(actors.uaid),...}
+    {field} license STRING : license
+    {field} rightsh JSON : rights holder
+    {field} created JSON : date created
+        'date splitted into iso components
+    {field} location STRING : location created
+        ' dcmi: spatial
+    {field} type STRING : dcmi type
+    {field} subject STRING : topics
+        ' in a controlled vocabulary
+    {field} $fk(language) CHAR(3) : lang.alpha3
+    {field} hash CHAR(128) : document hashing value
+    {field} acces CHAR(1) : access right
+        ' public, restricted, private
+    {field} $fk(mediator) UUID : actors.uaid
+        ' who manages access to the ressource
+    {field} $fk(publisher) UUID : actors.uaid
+        ' who makes ressource available
+    {field} format STRING : MIME format
+    {field} size SMALLINT : size (mo)
+        ' dcmi: extent
+    {field} duration SMALLINT : duration (iso 8601)
+        ' dcmi: extent
+    {field} $fk(source) UUID : doc.udid
+        ' related resource from which the described resource is derived
+    {field} $fk(isverof) UUID : doc.udid
+        ' is version of udid
+    '{field} relation  \t : related object id
+}
+
+
+'class "data" as dat <<draft>>
+'    dat : creator   \t : [fk:actors.uaid]
+'    dat : created   \t : recording utc timestamp
+'    dat : key       \t : [fk:datakeys.dky]
+'    dat : value     \t : data value
+
+ 
+'class "datakeys" as dke <<draft>>
+'    ' keys that identify the recorded data
+'    dke : dky     : data key
+    
+ 
+'class "transcription" as tcp <<draft>>
+'    'transcriptions : sightings, interviews
+'	tcp : fid     : unique file id
+'	tcp : uid     : unique user id
+'	tcp : rec     : recording utc timestamp
+'	tcp : key     : data key
+'        ' a key that identifies the data stored
+'	tcp : txt     : transcription
+ 
+
+class organizations  << (T,dimgrey) draft >> {
+    'organizations, legal entities
+	{field} oid UUID : unique organisation id
+    {field} onm STRING : legal entity name
+}
+
+
+'rub: links
+
+user            -[#darkcyan]->       files
+identities      - ->                  user
+identities      - ->                  contact
+identities      - ->                  actors
+files           - ->                  actors
+roles           -[#darkgreen]->      actors
+tz              -[#darkgreen]->      contact
+organizations   - ->                  actors
+lang            -[#darkgreen]->      identities
+countries       -[#darkgreen]->      identities
+countries       -[#darkgreen]->      contact
+lang            -[#darkgreen]->      roles
+lang            -[#darkgreen]->      doc
+actors          - ->                  doc
+doc             - ->                  doc
+'dke::dky        - ->                  dat::dky
+'user::uii       -[#darkcyan]->       log::uid
+'act::uaid       - ->                  dat::uaid
+
+
+'rub: notes
+'- witness profession : record as a data ? not in 'contact'
+@enduml
+
+@startuml
+
+
+skinparam titlefontstyle bold
+
+skinparam arrowfontsize 8
+skinparam arrowcolor firebrick
+skinparam arrowthickness 2
+
+skinparam classfontstyle bold
+skinparam classfontcolor firebrick
+skinparam classbordercolor firebrick
+skinparam classbackgroundcolor floralwhite
+skinparam classfontstyle bold
+skinparam classattributefontname liberation mono
+skinparam linetype ortho
+
+
+skinparam class {
+    bordercolor<<draft>> black
+    fontcolor<<draft>> dimgrey
+    backgroundcolor<<draft>> white
+
+    bordercolor<<reference>> darkgreen
+    backgroundcolor<<reference>> mintcream
+    fontcolor<<reference>> darkgreen
+
+    bordercolor<<internal>> darkcyan
+    backgroundcolor<<internal>> azure
+    fontcolor<<internal>> darkcyan
+}
+
+hide empty methods
+
+
+title database model for uap sightings recording
+footer
+    This work is licensed under the creative commons attribution-sharealike 4.0
+    international license. To view a copy of this license, visit
+    http://creativecommons.org/licenses/by-sa/4.0/.
+endfooter
+
+
+
+
+class files << (T,Firebrick) >> {
+	{field}  <b>fid</b> UUID : file id
+	{field}  <b>created</b> TIMESTAMP(0) : recording utc timestamp
+	{field}  <b><i>creator</i></b> UUID : user.uiid
+	{field} -ref STRING : user-defined file reference
+}
+ 
+
+class user << (T, darkcyan) internal >> {
+	{field} <b><i>uiid</i></b> UUID : identities.uiid
+	{field} #<b><u>ulg</u></b> STRING : loggin
+	{field} #ucz STRING : password
+	{field} #uk1 CHAR(128) : key 1
+}
+ 
+
+class identities << (T,firebrick) >> {
+	{field}  <u>uiid</u> UUID : unique identity id
+	{field} -<b>gname</b> STRING : given name, first name
+	{field} -<b>fname</b> STRING : family name, last name
+	{field} -aname STRING : additionnal names (csv)
+	{field} -hprfx STRING : honorific prefixes (csv)
+	{field} -hsufx STRING : honorific suffixes (csv)
+	{field}  <b>gender</b> CHAR(1) : gender
+	{field}  <b><i>lang</i></b> JSON : {lang.alpha3 : lang.version}
+	{field} -<b>bday</b> DATE : birth date
+	{field} -<b><i>bcntry</i></b> STRING : birth country
+	{field} -<b>bregion</b> STRING : birth region/state
+	{field} -<b>bplace</b> STRING : birth place postal code
+	{field}  <b>anonym</b> BOOLEAN : is anonymous
+}
+ 
+
+class contact << (T,firebrick) >> {
+	{field}  <b><i>uiid</i></b> UUID : identities.uiid
+	{field} -street STRING : street name
+	{field} -number SMALLINT : number
+	{field} -box VARCHAR(3) : post box
+	{field} -postal STRING : postal code
+	{field} -region STRING : region, state
+	{field} -<i>country</i> CHAR(3) : countries.alpha3
+	{field} -<i>tz</i> STRING : tz.timezone
+	{field} -email STRING : email
+	{field} -tel STRING : phone
+}
+ 
+
+class actors  << (T,firebrick) >> {
+	{field} <u>uaid</u> UUID : unique actor id
+	{field} <b><i>uiid</i></b> UUID : identities.uiid
+	{field} <b><i>fid</i></b> UUID : files.fid
+	{field} <b>from</b> TIMESTAMP(0) : from utc timestamp
+	{field} <b>to</b> TIMESTAMP(0) : to utc timestamp
+	{field} <b><i>key</i></b> STRING : roles.key
+	{field} <b><i>oid</i></b> UUID : linked organization organization.oid
+	{field} nickname STRING : public name or pseudo
+}
+ 
+
+class lang << (T,darkgreen) reference >> {
+    {field} <b>alpha3</b> CHAR(3) : iso 639 alpha-3 code
+    {field} <b>version</b> STRING : iso version
+    {field} name STRING : name of language
+}
+ 
+
+class tz << (T,darkgreen) reference >> {
+    {field} <b>timezone</b> STRING : iana timezone
+    {field} <b>version</b> STRING : version
+}
+ 
+
+class countries << (T,darkgreen) reference >> {
+    {field} <b>alpha3</b> CHAR(3) : iso 3166 alpha-3 code
+    {field} <b>version</b> STRING : iso 3166 version
+    {field} name STRING : name of country
+}
+
+
+class roles << (T,darkgreen) reference >> {
+	{field} <b>key</b> STRING : role key
+	{field} labels JSON : {<i>lang.alpha3</i> : label,...}
+}
+
+ 
+
+
+class doc << (T,Firebrick) >> {
+    {field} <b>udid</b> UUID : unique document id
+    {field} <i>author</i> UUID : actors.uaid
+    {field} title STRING : title
+    {field} desc STRING : description
+    {field} contrib JSON : contributors {<i>actors.uaid</i>,...}
+    {field} license STRING : license
+    {field} rightsh JSON : rights holder
+    {field} created JSON : date created
+    {field} location STRING : location created
+    {field} type STRING : dcmi type
+    {field} subject STRING : topics
+    {field} <i>language</i> CHAR(3) : lang.alpha3
+    {field} hash CHAR(128) : document hashing value
+    {field} acces CHAR(1) : access right
+    {field} <i>mediator</i> UUID : actors.uaid
+    {field} <i>publisher</i> UUID : actors.uaid
+    {field} format STRING : MIME format
+    {field} size SMALLINT : size (mo)
+    {field} duration SMALLINT : duration (iso 8601)
+    {field} <i>source</i> UUID : doc.udid
+    {field} <i>isverof</i> UUID : doc.udid
+}
+
+
+
+ 
+    
+ 
+ 
+
+class organizations  << (T,dimgrey) draft >> {
+	{field} oid UUID : unique organisation id
+    {field} onm STRING : legal entity name
+}
+
+
+
+user            -[#darkcyan]->       files
+identities      - ->                  user
+identities      - ->                  contact
+identities      - ->                  actors
+files           - ->                  actors
+roles           -[#darkgreen]->      actors
+tz              -[#darkgreen]->      contact
+organizations   - ->                  actors
+lang            -[#darkgreen]->      identities
+countries       -[#darkgreen]->      identities
+countries       -[#darkgreen]->      contact
+lang            -[#darkgreen]->      roles
+lang            -[#darkgreen]->      doc
+actors          - ->                  doc
+doc             - ->                  doc
+
+
+@enduml
+
+PlantUML version 1.2021.10beta2(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

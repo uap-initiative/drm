@@ -1,0 +1,265 @@
+@startuml
+
+'plantuml version : 1.2021.10beta2
+
+'Tthis work is licensed under the creative commons attribution-sharealike 4.0
+'international license. To view a copy of this license, visit
+'http://creativecommons.org/licenses/by-sa/4.0/.
+
+'!include skin.iuml
+skinparam titlefontstyle bold
+
+skinparam arrowfontsize 8
+skinparam arrowcolor firebrick
+skinparam arrowthickness 2
+
+skinparam classfontstyle bold
+skinparam classfontcolor firebrick
+skinparam classbordercolor firebrick
+skinparam classbackgroundcolor floralwhite
+skinparam classfontstyle bold
+skinparam classattributefontname liberation mono
+skinparam linetype ortho
+
+!function $fk($a) !return "<i>" + $a + "</i>"
+    'foreign key
+!function $pk($a) !return "<b>" + $a + "</b>"
+    'primary key
+!function $uk($a) !return "<u>" + $a + "</u>"
+    'unique key
+
+skinparam class {
+    'draft
+    bordercolor<<draft>> black
+    fontcolor<<draft>> dimgrey
+    backgroundcolor<<draft>> white
+
+    'reference
+    bordercolor<<reference>> darkgreen
+    backgroundcolor<<reference>> mintcream
+    fontcolor<<reference>> darkgreen
+
+    'internal
+    bordercolor<<internal>> darkcyan
+    backgroundcolor<<internal>> azure
+    fontcolor<<internal>> darkcyan
+}
+
+hide empty methods
+
+
+title database model for uap sightings recording
+footer
+    This work is licensed under the creative commons attribution-sharealike 4.0
+    international license. To view a copy of this license, visit
+    http://creativecommons.org/licenses/by-sa/4.0/.
+endfooter
+
+'- : private     : r/w localy by the user, not published
+'# : protected   : r/w localy by the user, encrypted, not published
+
+
+'rub: objects
+
+class files << (T,Firebrick) >> {
+	{field}  $pk(fid) UUID : file id
+        'formerly : fid CHAR(128)
+	{field}  $pk(created) TIMESTAMP(0) : recording utc timestamp
+        'formerly rec FLOAT
+	{field}  $pk($fk(creator)) UUID : user.uiid
+        'uid
+	{field} -ref STRING : user-defined file reference
+        'udr
+}
+ 
+
+class user << (T, darkcyan) internal >> {
+    'local app users
+	{field} $pk($fk(uiid)) UUID : identities.uiid
+	{field} #$pk($uk(ulg)) STRING : loggin
+	{field} #ucz STRING : password
+	{field} #uk1 CHAR(128) : key 1
+}
+ 
+
+class identities << (T,firebrick) >> {
+    'people
+	{field}  $uk(uiid) UUID : unique identity id
+	{field} -$pk(gname) STRING : given name, first name
+	{field} -$pk(fname) STRING : family name, last name
+	{field} -aname STRING : additionnal names (csv)
+	{field} -hprfx STRING : honorific prefixes (csv)
+	{field} -hsufx STRING : honorific suffixes (csv)
+	{field}  $pk(gender) CHAR(1) : gender
+	{field}  $pk($fk(lang)) JSON : {lang.alpha3 : lang.version}
+	{field} -$pk(bday) DATE : birth date
+	{field} -$pk($fk(bcntry)) STRING : birth country
+	{field} -$pk(bregion) STRING : birth region/state
+	{field} -$pk(bplace) STRING : birth place postal code
+	{field}  $pk(anonym) BOOLEAN : is anonymous
+}
+ 
+
+class contact << (T,firebrick) >> {
+    'identities contact details
+	{field}  $pk($fk(uiid)) UUID : identities.uiid
+	{field} -street STRING : street name
+	{field} -number SMALLINT : number
+	{field} -box VARCHAR(3) : post box
+	{field} -postal STRING : postal code
+	{field} -region STRING : region, state
+	{field} -$fk(country) CHAR(3) : countries.alpha3
+	{field} -$fk(tz) STRING : tz.timezone
+	{field} -email STRING : email
+	{field} -tel STRING : phone
+}
+ 
+
+class actors  << (T,firebrick) >> {
+    'role(s) taken by identities in each file
+	{field} $uk(uaid) UUID : unique actor id
+	{field} $pk($fk(uiid)) UUID : identities.uiid
+	{field} $pk($fk(fid)) UUID : files.fid
+	{field} $pk(from) TIMESTAMP(0) : from utc timestamp
+	{field} $pk(to) TIMESTAMP(0) : to utc timestamp
+	{field} $pk($fk(key)) STRING : roles.key
+	{field} $pk($fk(oid)) UUID : linked organization organization.oid
+	{field} nickname STRING : public name or pseudo
+}
+ 
+
+class lang << (T,darkgreen) reference >> {
+    'iso 639 languages
+    {field} $pk(alpha3) CHAR(3) : iso 639 alpha-3 code
+    {field} $pk(version) STRING : iso version
+    {field} name STRING : name of language
+}
+ 
+
+class tz << (T,darkgreen) reference >> {
+    'iana timezones
+    {field} $pk("timezone") STRING : iana timezone
+    {field} $pk("version") STRING : version
+        ' as stated in the file 'version'
+}
+ 
+
+class countries << (T,darkgreen) reference >> {
+    'iso 3166 country codes
+    {field} $pk(alpha3) CHAR(3) : iso 3166 alpha-3 code
+    {field} $pk(version) STRING : iso 3166 version
+    {field} name STRING : name of country
+}
+
+
+class roles << (T,darkgreen) reference >> {
+    'roles that can be taken by identities in files :
+    '   direct witness, indirect witness, self-employed investigator, investigator
+    '   attaché, ufologist, organization manager
+	{field} $pk(key) STRING : role key
+	{field} labels JSON : {$fk(lang.alpha3) : label,...}
+}
+
+ 
+'class "log" as log <<internal>>
+'    log : table  \t : affected table
+'    log : object \t : affected id
+'    log : action \t : create, modify, delete
+'    log : uiid   \t : [fk:user.uiid]
+'    log : date   \t : utc timestamp
+
+
+class doc << (T,Firebrick) >> {
+    'documents
+    'according to dcmi 'terms' and 'types' namespaces
+    {field} $pk(udid) UUID : unique document id
+    {field} $fk(author) UUID : actors.uaid
+        ' dcmi: creator
+    {field} title STRING : title
+    {field} desc STRING : description
+    {field} contrib JSON : contributors {$fk(actors.uaid),...}
+    {field} license STRING : license
+    {field} rightsh JSON : rights holder
+    {field} created JSON : date created
+        'date splitted into iso components
+    {field} location STRING : location created
+        ' dcmi: spatial
+    {field} type STRING : dcmi type
+    {field} subject STRING : topics
+        ' in a controlled vocabulary
+    {field} $fk(language) CHAR(3) : lang.alpha3
+    {field} hash CHAR(128) : document hashing value
+    {field} acces CHAR(1) : access right
+        ' public, restricted, private
+    {field} $fk(mediator) UUID : actors.uaid
+        ' who manages access to the ressource
+    {field} $fk(publisher) UUID : actors.uaid
+        ' who makes ressource available
+    {field} format STRING : MIME format
+    {field} size SMALLINT : size (mo)
+        ' dcmi: extent
+    {field} duration SMALLINT : duration (iso 8601)
+        ' dcmi: extent
+    {field} $fk(source) UUID : doc.udid
+        ' related resource from which the described resource is derived
+    {field} $fk(isverof) UUID : doc.udid
+        ' is version of udid
+    '{field} relation  \t : related object id
+}
+
+
+'class "data" as dat <<draft>>
+'    dat : creator   \t : [fk:actors.uaid]
+'    dat : created   \t : recording utc timestamp
+'    dat : key       \t : [fk:datakeys.dky]
+'    dat : value     \t : data value
+
+ 
+'class "datakeys" as dke <<draft>>
+'    ' keys that identify the recorded data
+'    dke : dky     : data key
+    
+ 
+'class "transcription" as tcp <<draft>>
+'    'transcriptions : sightings, interviews
+'	tcp : fid     : unique file id
+'	tcp : uid     : unique user id
+'	tcp : rec     : recording utc timestamp
+'	tcp : key     : data key
+'        ' a key that identifies the data stored
+'	tcp : txt     : transcription
+ 
+
+class organizations  << (T,dimgrey) draft >> {
+    'organizations, legal entities
+	{field} oid UUID : unique organisation id
+    {field} onm STRING : legal entity name
+}
+
+
+'rub: links
+
+user            -[#darkcyan]->       files
+identities      -->                  user
+identities      -->                  contact
+identities      -->                  actors
+files           -->                  actors
+roles           -[#darkgreen]->      actors
+tz              -[#darkgreen]->      contact
+organizations   -->                  actors
+lang            -[#darkgreen]->      identities
+countries       -[#darkgreen]->      identities
+countries       -[#darkgreen]->      contact
+lang            -[#darkgreen]->      roles
+lang            -[#darkgreen]->      doc
+actors          -->                  doc
+doc             -->                  doc
+'dke::dky        -->                  dat::dky
+'user::uii       -[#darkcyan]->       log::uid
+'act::uaid       -->                  dat::uaid
+
+
+'rub: notes
+'- witness profession : record as a data ? not in 'contact'
+
+@enduml
