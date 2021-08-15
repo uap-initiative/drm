@@ -82,21 +82,27 @@ class user << (T, darkcyan) internal >> {
 }
  
 
-class identities << (T,firebrick) >> {
-    'people
-	{field}  $uk(uiid) UUID : unique identity id
-	{field} -$pk(gname) STRING : given name, first name
-	{field} -$pk(fname) STRING : family name, last name
+class individuals << (T,firebrick) >> {
+	{field}  $pk($fk(uiid)) UUID : unique identity id
+	{field} -gname STRING : given name, first name
+	{field} -fname STRING : family name, last name
 	{field} -aname STRING : additionnal names (csv)
 	{field} -hprfx STRING : honorific prefixes (csv)
 	{field} -hsufx STRING : honorific suffixes (csv)
-	{field}  $pk(gender) CHAR(1) : gender
-	{field}  $pk($fk(lang)) JSON : {lang.alpha3 : lang.version}
-	{field} -$pk(bday) DATE : birth date
-	{field} -$pk($fk(bcntry)) STRING : birth country
-	{field} -$pk(bregion) STRING : birth region/state
-	{field} -$pk(bplace) STRING : birth place postal code
-	{field}  $pk(anonym) BOOLEAN : is anonymous
+	{field}  gender CHAR(1) : gender
+	{field}  $fk(lang) JSON : {lang.alpha3 : lang.version}
+	{field} -bday DATE : birth date
+	{field} -$fk(bcntry) STRING : birth country
+	{field} -bregion STRING : birth region/state
+	{field} -bplace STRING : birth place postal code
+	{field}  anonym BOOLEAN : is anonymous
+}
+ 
+
+class identities << (T,firebrick) >> {
+    'individuals and organizations
+	{field}  $pk(uiid) UUID : unique identity id
+	{field}  $pk(type) CHAR(1) : {indiv|org}
 }
  
 
@@ -123,7 +129,7 @@ class actors  << (T,firebrick) >> {
 	{field} $pk(from) TIMESTAMP(0) : from utc timestamp
 	{field} $pk(to) TIMESTAMP(0) : to utc timestamp
 	{field} $pk($fk(key)) STRING : roles.key
-	{field} $pk($fk(oid)) UUID : linked organization organization.oid
+	{field} $pk($fk(oid)) UUID : linked organization identities.uiid
 	{field} nickname STRING : public name or pseudo
 }
  
@@ -173,13 +179,13 @@ class doc << (T,Firebrick) >> {
     'documents
     'according to dcmi 'terms' and 'types' namespaces
     {field} $pk(udid) UUID : unique document id
-    {field} $fk(author) UUID : actors.uaid
+    {field} $fk(author) JSON : {actors.uaid,...}
         ' dcmi: creator
     {field} title STRING : title
     {field} desc STRING : description
-    {field} contrib JSON : contributors {$fk(actors.uaid),...}
+    {field} $fk(contrib) JSON : contributors {actors.uaid,...}
     {field} license STRING : license
-    {field} rightsh JSON : rights holder
+    {field} rightsh JSON : rights holder {actors.uaid,...}
     {field} created JSON : date created
         'date splitted into iso components
     {field} location STRING : location created
@@ -191,14 +197,14 @@ class doc << (T,Firebrick) >> {
     {field} hash CHAR(128) : document hashing value
     {field} acces CHAR(1) : access right
         ' public, restricted, private
-    {field} $fk(mediator) UUID : actors.uaid
+    {field} $fk(mediator) JSON :  {actors.uaid,...}
         ' who manages access to the ressource
     {field} $fk(publisher) UUID : actors.uaid
         ' who makes ressource available
     {field} format STRING : MIME format
-    {field} size SMALLINT : size (mo)
+    {field} size INTEGER : size (mo)
         ' dcmi: extent
-    {field} duration SMALLINT : duration (iso 8601)
+    {field} duration INTEGER : duration (iso 8601)
         ' dcmi: extent
     {field} $fk(source) UUID : doc.udid
         ' related resource from which the described resource is derived
@@ -232,7 +238,7 @@ class doc << (T,Firebrick) >> {
 
 class organizations  << (T,dimgrey) draft >> {
     'organizations, legal entities
-	{field} oid UUID : unique organisation id
+	{field} $pk($fk(uiid)) UUID : unique identity id
     {field} onm STRING : legal entity name
 }
 
@@ -241,14 +247,15 @@ class organizations  << (T,dimgrey) draft >> {
 
 user            -[#darkcyan]->       files
 identities      -->                  user
+identities      -->                  individuals
+identities      -->                  organizations
 identities      -->                  contact
 identities      -->                  actors
 files           -->                  actors
 roles           -[#darkgreen]->      actors
 tz              -[#darkgreen]->      contact
-organizations   -->                  actors
-lang            -[#darkgreen]->      identities
-countries       -[#darkgreen]->      identities
+lang            -[#darkgreen]->      individuals
+countries       -[#darkgreen]->      individuals
 countries       -[#darkgreen]->      contact
 lang            -[#darkgreen]->      roles
 lang            -[#darkgreen]->      doc
